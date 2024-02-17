@@ -1,0 +1,74 @@
+[gd_scene load_steps=5 format=3 uid="uid://c6ljaqt7cwxdx"]
+
+[ext_resource type="Script" path="res://pattern_z.gd" id="1_vmhht"]
+[ext_resource type="Script" path="res://main.gd" id="1_vut7r"]
+[ext_resource type="Texture2D" uid="uid://0bhebt3i8k48" path="res://icon.svg" id="3_8w4d4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_635cs"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8, 0.0470588, 0, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 51.0
+offset_top = 26.0
+offset_right = 51.0
+offset_bottom = 26.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vut7r")
+
+[node name="PatternA1" type="Node2D" parent="."]
+position = Vector2(453, 269)
+script = ExtResource("1_vmhht")
+r = 5
+color = Color(0, 0.454902, 0.458824, 1)
+
+[node name="PatternA2" type="Node2D" parent="."]
+visible = false
+position = Vector2(453, 369)
+script = ExtResource("1_vmhht")
+r = 5
+color = Color(0.984314, 0.141176, 1, 1)
+
+[node name="PatternA4" type="Node2D" parent="."]
+position = Vector2(454, 671)
+script = ExtResource("1_vmhht")
+r = 5
+color = Color(0.984314, 0.141176, 1, 1)
+
+[node name="PatternA3" type="Node2D" parent="."]
+visible = false
+position = Vector2(452, 468)
+script = ExtResource("1_vmhht")
+r = 5
+color = Color(0.803922, 0.384314, 0, 1)
+
+[node name="Icon" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(593, 402)
+rotation = 1.03844
+scale = Vector2(4.65625, 0.0703125)
+texture = ExtResource("3_8w4d4")
+
+[node name="Icon2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(319, 408)
+rotation = 2.08079
+scale = Vector2(4.65625, 0.0703125)
+texture = ExtResource("3_8w4d4")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 184.0
+offset_top = 372.0
+offset_right = 584.0
+offset_bottom = 587.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_635cs")
